@@ -2,22 +2,22 @@
 <robot name="red_cylinder">
 
 <link name="base_link">
-  <collision>
-    <origin xyz="0 0 0.02" rpy="0 0 0"/>
+  <collision name="cyl_collision">
+    <origin xyz="0 0 0.04" rpy="0 0 0"/>
     <geometry>
-      <cylinder length="0.04" radius="0.02"/>
+      <cylinder length="0.08" radius="0.04"/>
     </geometry>
   </collision>
 
   <visual>
-    <origin xyz="0 0 0.02" rpy="0 0 0"/>
+    <origin xyz="0 0 0.04" rpy="0 0 0"/>
     <geometry>
-      <cylinder length="0.04" radius="0.02"/>
+      <cylinder length="0.08" radius="0.04"/>
     </geometry>
   </visual>
 
   <inertial>
-    <origin xyz="0 0 0.02" rpy="0 0 0"/>
+    <origin xyz="0 0 0.04" rpy="0 0 0"/>
     <mass value="0.00001"/>
     <inertia
       ixx="0.00001" ixy="0.0" ixz="0.0"
