@@ -194,7 +194,7 @@ int main(int argc, char **argv) {
 
     double dt = 0.01;  // sample time for the joint controller
 
-    // instantiate 4 joint instances
+    // instantiate 2 joint instances
     Joint scara_left_joint1(nh, "scara_robot_left::rotation1", -0.78, dt);
     Joint scara_left_joint2(nh, "scara_robot_left::rotation2", 2.1, dt);
 
