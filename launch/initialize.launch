@@ -11,9 +11,6 @@
   <!-- because roslaunch doesn't guarantee serial running of each node -->
   <!-- in this case, two scara will hit each other and swing back and forth -->
 
-
-  <!-- <node name="red_cylinder" pkg="gazebo_ros" type="spawn_model" args="-file $(find two_scara_collaboration)/urdf/red_cylinder.urdf -urdf -model red_cylinder"/> -->
-
   <!-- spawn the left scara robot in gazebo -->
   <node name="spawn_scara_robot_left" pkg="gazebo_ros" type="spawn_model" args="-file $(find two_scara_collaboration)/urdf/scara_robot_left.urdf -urdf -model scara_robot_left
     -y 1.5
@@ -21,18 +18,8 @@
     -J scara_robot_left::rotation2 2.1" />
 
 
-  <!-- the gripper control action server node -->
-  <node name="scara_gripper_action_server" pkg="two_scara_collaboration" type="scara_gripper_action_server" output="log" />
-
   <!-- the scara robot joint controller node -->
   <node name="scara_joint_controller" pkg="two_scara_collaboration" type="scara_joint_controller" output="log" />
-
-  <!-- the maintainer for scara upper boundary topics -->
-  <node name="scara_upper_boundary_maintainer" pkg="two_scara_collaboration" type="scara_upper_boundary_maintainer" output="log" />
-
-
-  <!-- for ros control to be used with scara robot -->
-<!--   <param name="/scara_robot_left/robot_description" textfile="$(find two_scara_collaboration)/urdf/scara_robot_left.urdf" /> -->
 
 
 
